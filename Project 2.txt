@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Welcome to my art corner!</h2>
+
+<form>
+<!-- This is a MUlitple field sets and mobile keyboard option-->
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br>
+  <label for="email">Your email:</label><br>
+  <input type="email" id="email" name="email" value="you@wherever.org" inputmode="email"><br><br>
+  
+<p>How did you hear about us?</p>
+<!-- This is a radio button -->
+  <input type="radio" id="html" name="source" value="Web">
+  <label for="web">Web</label><br>
+  <input type="radio" id="television" name="source" value="Television">
+  <label for="television">Television</label><br>
+  <input type="radio" id="friend" name="source" value="Friend">
+  <label for="friend">Friend</label>
+  
+  <p><strong>Are you over 18 years of age?</strong></p>
+<!-- This is a checkboxes -->
+  <input type="checkbox" id="yes" name="yes" value="Yes">
+  <label for="yes"> I am over 18</label><br>
+  <input type="checkbox" id="no" name="no" value="No">
+  <label for="no"> I am not over 18</label><br><br>
+<!-- This is a date and time field -->  
+  <label for="birthday">Verify your birthday:</label>
+  <input type="date" id="birthday" name="birthday"><br><br>
+ 
+<div>
+<!-- This is a selecton list -->
+<label for="interests">Are you interested in any of these other areas?</label>
+<select id="interests">
+  <option value="none" selected>None</option>
+  <option value="artHistory">Art History</option>
+  <option value="digitalArt">Digital Art</option>
+  <option value="3dArt">3d Art</option>
+  <option value="other">Other</option>
+</select><br>
+<!-- This is a text field --> 
+  <p><label for="otherAreas">If you selected other, then what areas are you interested in?</label></p>
+  <textarea id="otherAreas" name="otherAreas" rows="4" cols="50">Type your answer here, please.</textarea>
+  <br>
+</select>
+<!-- This is a slider -->
+<h2>How confident are you in Adobe?</h2>
+<div class="slidecontainer">
+  <p>0-50, with 0 being not confident at all, and 50 being extremely confident:</p>
+  <input type="range" min="1" max="100" value="50"><br><br>
+  
+  <label for="browser">Choose the browser you use to access Adobe Suite from the list:</label>
+  <input list="browsers" name="browser" id="browser">
+  <datalist id="browsers">
+    <option value="Edge">
+    <option value="Firefox">
+    <option value="Chrome">
+    <option value="Opera">
+    <option value="Safari">
+  </datalist>
+
+</div>
+<!-- This is for patternfield lenghths, alerts, required sections, submit and reset buttons-->
+<div>
+  <h2>Create Account</h2>
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username" required><br>
+  <label for="pwd">Password:</label><br>
+  <input type="password" id="pwd" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br><br>
+  <input type="reset" value="Reset" >
+  <input type="submit" value="Submit" onclick="myFunction()">
+
+<script>
+function myFunction() {
+  alert("Are You Sure you want to create an account?");
+}
+</script>
+
+</div>
+
+<p id="demo"></p>
+
+
+<script>
+//Current day and time:
+const d = new Date();
+document.getElementById("demo").innerHTML = d;
+</script>
+
+<style>
+
+input:focus {
+  background-color: yellow;
+}
+</style>
+
+
+</form>
+</body>
+</html>
+
